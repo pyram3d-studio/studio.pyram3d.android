@@ -1,8 +1,9 @@
-package app.triangl3d.ui.home
+package app.pyram3d.ui.home
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import app.pyram3d.data.Pyramid
 
 class HomeViewModel : ViewModel() {
 
@@ -14,7 +15,12 @@ class HomeViewModel : ViewModel() {
         "Las pirámides se pueden clasificar según el número de lados que tiene su base: triángular, cuadrangular, pentagonal y hexagonal."
     ).random() }
 
+    private val _pyramid = MutableLiveData<Pyramid>().apply { value = Pyramid(138.0, 227.0, 4) }
+
     val cardText: LiveData<String> = _cardText
     val buttonText: LiveData<String> = _buttonText
     val cardSuggestion: LiveData<String> = _cardSuggestion
+
+    val pyramid: LiveData<Pyramid> = _pyramid
+
 }
