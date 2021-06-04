@@ -6,40 +6,41 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
-    <!-- A CardView that contains a TextView -->
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view"
         android:layout_gravity="top"
         android:layout_width="match_parent"
-        android:layout_margin="14dp"
+        android:layout_margin="@dimen/activity_horizontal_margin"
         android:layout_height="180dp"
-        android:paddingBottom="4dp"
-        android:paddingTop="4dp"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
         card_view:cardCornerRadius="4dp">
 
         <TextView
             android:id="@+id/card_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="14dp"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:text="@string/fragment_home_did_you_know"
             android:textSize="20sp"
-            android:layout_gravity="top"
+            android:layout_gravity="top|center"
             android:textStyle="bold" />
         <TextView
-            android:id="@+id/card_suggestion"
+            android:id="@+id/card_curiosity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="14sp"
             android:layout_gravity="center"
-            android:layout_margin="14dp" />
+            android:layout_margin="@dimen/activity_horizontal_margin" />
         <Button
             android:id="@+id/button_continue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end|bottom"
-            android:layout_marginEnd="14dp"
-            android:layout_marginBottom="14dp"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
             android:textColor="@color/red_200"
+            android:text="@string/fragment_home_learn_more"
             style="?android:attr/borderlessButtonStyle" />
     </androidx.cardview.widget.CardView>
 </LinearLayout>

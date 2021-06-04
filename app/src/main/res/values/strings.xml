@@ -2,13 +2,34 @@
     <string name="app_name">Pyram3d</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Pyram3d</string>
+    <string name="nav_header_title">Pyram3d</string>s
     <string name="nav_header_subtitle">Your Geometry Companion</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
     <string name="menu_home">Inicio</string>
-    <string name="pyramid_name">Piramide de Keops</string>
-    <string name="pyramid_height">Altura: %1$s! metros cuadrados.</string>
+    <string name="menu_pyramid">Pirámide</string>
+    <string name="pyramid_name">Pirámide de Keops</string>
+    <string name="pyramid_height">Altura: %1$s! square meters.</string>
+
+    <string name="main_fab_descriptor">Calcular</string>
+
+
+    <string name="fragment_home_did_you_know">Sabías qué…</string>
+    <string name="fragment_home_learn_more">Saber Más</string>
+    <string name="fragment_home_curiosity_1">Las pirámides de Egipto, fueron construidas hace 4 mil años, hoy siendo la maravilla más antigua y la única que se conserva.</string>
+    <string name="fragment_home_curiosity_2">El primer arquitecto registrado en la historia, es Imhotep, responsable de la construcción de la pirámide escalonada de Zoser.</string>
+    <string name="fragment_home_curiosity_3">Las pirámides se pueden clasificar según el número de lados que tiene su base: triángular, cuadrangular, pentagonal y hexagonal.</string>
+
+    <string name="fragment_pyramid_height_label">Altura:</string>
+    <string name="fragment_pyramid_base_label">Base:</string>
+    <string name="fragment_pyramid_sides_label">Lados:</string>
+
+    <string-array name="fragment_pyramid_sides_spinners">
+        <item>Triangular</item>
+        <item>Cuadrangular</item>
+        <item>Pentagonal</item>
+        <item>Hexagonal</item>
+    </string-array>
 
 </resources>

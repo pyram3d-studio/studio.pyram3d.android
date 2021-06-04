@@ -12,5 +12,11 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+
+        <item name="android:textColor">@android:color/primary_text_dark</item>
     </style>
+
+    <style name="Theme.Pyram3d.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark" />
+
+    <style name="Theme.Pyram3d.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark" />
 </resources>

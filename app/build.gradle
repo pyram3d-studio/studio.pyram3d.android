@@ -8,7 +8,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "app.triangl3d"
+        applicationId 'app.pyram3d'
         minSdkVersion 25
         targetSdkVersion 30
         versionCode 1

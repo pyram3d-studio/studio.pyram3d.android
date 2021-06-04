@@ -10,6 +10,9 @@
         android:supportsRtl="false"
         android:theme="@style/Theme.Pyram3d">
         <activity
+            android:name=".PyramidActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
             android:theme="@style/Theme.Pyram3d.NoActionBar">

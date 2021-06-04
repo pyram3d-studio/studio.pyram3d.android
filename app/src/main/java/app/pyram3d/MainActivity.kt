@@ -3,7 +3,6 @@ package app.pyram3d
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
-import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -28,10 +27,7 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(binding.appBarMain.toolbar)
 
         binding.appBarMain.fab.setOnClickListener {
-            // val intent = Intent(this, DisplayMessageActivity::class.java).apply {
-            //    putExtra(EXTRA_MESSAGE, message)
-            // }
-            // startActivity(intent)
+            startActivity(Intent(this, PyramidActivity::class.java))
         }
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
