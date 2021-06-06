@@ -1,4 +1,4 @@
-package app.pyram3d
+package studio.pyram3d
 
 import android.content.Intent
 import android.os.Bundle
@@ -11,7 +11,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
-import app.pyram3d.databinding.ActivityMainBinding
+import studio.pyram3d.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 

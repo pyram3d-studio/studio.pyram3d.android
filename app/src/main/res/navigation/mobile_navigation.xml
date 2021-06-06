@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="app.pyram3d.ui.home.HomeFragment"
+        android:name="studio.pyram3d.ui.home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
 </navigation>

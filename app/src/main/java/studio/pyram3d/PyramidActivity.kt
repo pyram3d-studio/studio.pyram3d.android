@@ -1,8 +1,8 @@
-package app.pyram3d
+package studio.pyram3d
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import app.pyram3d.databinding.ActivityPyramidBinding
+import studio.pyram3d.databinding.ActivityPyramidBinding
 
 class PyramidActivity : AppCompatActivity() {
 

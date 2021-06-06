@@ -1,4 +1,4 @@
-package app.pyram3d.data
+package studio.pyram3d.data
 
 class Pyramid(val height: Double, val base: Double, sides: Int = 3) {
     val laterals: HashSet<Triangle> = hashSetOf()

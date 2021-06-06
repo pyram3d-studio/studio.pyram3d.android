@@ -1,4 +1,4 @@
-package app.pyram3d.ui.pyramid
+package studio.pyram3d.ui.pyramid
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -7,8 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
-import app.pyram3d.R
-import app.pyram3d.databinding.FragmentPyramidBinding
+import studio.pyram3d.R
+import studio.pyram3d.databinding.FragmentPyramidBinding
 
 class PyramidFragment : Fragment() {
 

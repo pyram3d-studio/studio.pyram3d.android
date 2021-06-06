@@ -1,4 +1,4 @@
-package app.pyram3d.data
+package studio.pyram3d.data
 
 import kotlin.math.sqrt
 
