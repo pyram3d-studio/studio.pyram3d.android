@@ -20,7 +20,7 @@
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/nav_pyramid"
-                android:name="app.pyram3d.ui.pyramid.PyramidFragment"
+                android:name=".ui.pyramid.PyramidFragment"
                 tools:layout="@layout/fragment_pyramid"
                 android:layout_height="match_parent"
                 android:layout_width="match_parent" />

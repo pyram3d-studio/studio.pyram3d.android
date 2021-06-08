@@ -24,6 +24,8 @@
     <string name="fragment_pyramid_height_label">Altura:</string>
     <string name="fragment_pyramid_base_label">Base:</string>
     <string name="fragment_pyramid_sides_label">Lados:</string>
+    <string name="fragment_pyramid_calc_label">Calcular</string>
+    <string name="fragment_pyramid_edit_label">Editar</string>
 
     <string-array name="fragment_pyramid_sides_spinners">
         <item>Triangular</item>
