@@ -1,19 +1,15 @@
 <resources>
     <string name="app_name">Pyram3d Studio</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_open">Abrir navegación</string>
+    <string name="navigation_drawer_close">Cerrar navegación</string>
     <string name="nav_header_title">Pyram3d</string>s
-    <string name="nav_header_subtitle">Your Geometry Companion</string>
-    <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
+    <string name="nav_header_subtitle">Tu compañero de geometría</string>
+    <string name="nav_header_desc">Navegación</string>
+    <string name="action_settings">Ajustes</string>
 
     <string name="menu_home">Inicio</string>
-    <string name="menu_pyramid">Pirámide</string>
-    <string name="pyramid_name">Pirámide de Keops</string>
-    <string name="pyramid_height">Altura: %1$s! square meters.</string>
 
     <string name="main_fab_descriptor">Calcular</string>
-
 
     <string name="fragment_home_did_you_know">Sabías qué…</string>
     <string name="fragment_home_learn_more">Saber Más</string>
@@ -26,6 +22,10 @@
     <string name="fragment_pyramid_sides_label">Lados:</string>
     <string name="fragment_pyramid_calc_label">Calcular</string>
     <string name="fragment_pyramid_edit_label">Editar</string>
+    <string name="fragment_pyramid_calc_zero">Los valores no pueden contener cero, porque entonces el valor no existe.</string>
+    <string name="fragment_pyramid_area_label">Área:</string>
+    <string name="fragment_pyramid_apothem_label">Apotema:</string>
+    <string name="fragment_pyramid_volume_label">Volúmen:</string>
 
     <string-array name="fragment_pyramid_sides_spinners">
         <item>Triangular</item>

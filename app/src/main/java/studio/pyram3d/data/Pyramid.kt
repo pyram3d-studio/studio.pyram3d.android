@@ -8,8 +8,8 @@ class Pyramid(val height: Double, val base: Double, sides: Int = 3) {
     val volume: Double = ((area) * height) / 3
 
     init {
-        arrayOfNulls<Triangle>(sides).iterator().forEach { this.laterals.add(Triangle(height, base / 2)) }
-        val apotema: Double = if (this.laterals.any()) this.laterals.first().apotema else 0.0
+        arrayOfNulls<Triangle>(sides).iterator().forEach { _ -> this.laterals.add(Triangle(height, base / 2)) }
+        val apotema: Double = if (this.laterals.any()) this.laterals.first().apothem else 0.0
         lateralArea = ((area * apotema) / 2) * sides
         totalArea = (area) + lateralArea
     }

@@ -48,7 +48,8 @@
                         android:id="@+id/pyramid_height"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:inputType="numberDecimal" />
+                        android:inputType="numberDecimal"
+                        android:labelFor="@id/pyramid_height_label"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -64,13 +65,14 @@
                         android:layout_height="match_parent"
                         android:gravity="center_vertical"
                         android:text="@string/fragment_pyramid_base_label"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"/>
 
                     <EditText
                         android:id="@+id/pyramid_base"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:inputType="numberDecimal" />
+                        android:inputType="numberDecimal"
+                        android:labelFor="@id/pyramid_base_label" />
                 </LinearLayout>
 
 
@@ -129,65 +131,179 @@
             card:cardMaxElevation="8dp"
             card:layout_constraintEnd_toEndOf="parent"
             card:layout_constraintStart_toStartOf="parent"
-            card:layout_constraintTop_toTopOf="parent"
-            android:visibility="gone">
+            card:layout_constraintTop_toTopOf="parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:orientation="horizontal"
-                    android:paddingStart="@dimen/activity_horizontal_margin"
-                    android:paddingEnd="@dimen/activity_horizontal_margin">
-
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="horizontal">
                     <TextView
                         android:id="@+id/height_label"
+                        android:text="@string/fragment_pyramid_height_label"
                         android:layout_width="120dp"
                         android:layout_height="match_parent"
-                        android:gravity="center_vertical"
-                        android:text="@string/fragment_pyramid_height_label"
-                        android:textSize="16sp" />
-
+                        android:gravity="start|center"
+                        android:textSize="16sp"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin">
+                    </TextView>
+                    <TextView
+                        android:id="@+id/height"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:gravity="end|center">
+                    </TextView>
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:orientation="horizontal"
-                    android:paddingStart="@dimen/activity_horizontal_margin"
-                    android:paddingEnd="@dimen/activity_horizontal_margin">
-
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="horizontal">
                     <TextView
                         android:id="@+id/base_label"
+                        android:text="@string/fragment_pyramid_base_label"
                         android:layout_width="120dp"
                         android:layout_height="match_parent"
-                        android:gravity="center_vertical"
-                        android:text="@string/fragment_pyramid_base_label"
-                        android:textSize="16sp" />
-
+                        android:gravity="start|center"
+                        android:textSize="16sp"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin">
+                    </TextView>
+                    <TextView
+                        android:id="@+id/base"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:gravity="end|center">
+                    </TextView>
                 </LinearLayout>
-
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:orientation="horizontal"
-                    android:paddingStart="@dimen/activity_horizontal_margin"
-                    android:paddingEnd="@dimen/activity_horizontal_margin">
-
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="horizontal">
                     <TextView
                         android:id="@+id/sides_label"
+                        android:text="@string/fragment_pyramid_sides_label"
                         android:layout_width="120dp"
                         android:layout_height="match_parent"
-                        android:gravity="center_vertical"
-                        android:text="@string/fragment_pyramid_sides_label"
-                        android:textSize="16sp"/>
+                        android:gravity="start|center"
+                        android:textSize="16sp"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin">
+                    </TextView>
+                    <TextView
+                        android:id="@+id/sides"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:gravity="end|center">
+                    </TextView>
                 </LinearLayout>
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/area_label"
+                        android:text="@string/fragment_pyramid_area_label"
+                        android:layout_width="120dp"
+                        android:layout_height="match_parent"
+                        android:gravity="start|center"
+                        android:textSize="16sp"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin">
+                    </TextView>
+                    <TextView
+                        android:id="@+id/area"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:gravity="end|center">
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/apothem_label"
+                        android:text="@string/fragment_pyramid_apothem_label"
+                        android:layout_width="120dp"
+                        android:layout_height="match_parent"
+                        android:gravity="start|center"
+                        android:textSize="16sp"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin">
+                    </TextView>
+                    <TextView
+                        android:id="@+id/apothem"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:gravity="end|center">
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/volume_label"
+                        android:text="@string/fragment_pyramid_volume_label"
+                        android:layout_width="120dp"
+                        android:layout_height="match_parent"
+                        android:gravity="start|center"
+                        android:textSize="16sp"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin">
+                    </TextView>
+                    <TextView
+                        android:id="@+id/volume"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:gravity="end|center">
+                    </TextView>
+                </LinearLayout>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
     </LinearLayout>
