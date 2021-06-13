@@ -97,6 +97,23 @@
                         android:layout_height="match_parent" />
                 </LinearLayout>
 
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:paddingStart="@dimen/activity_horizontal_margin"
+                    android:paddingEnd="@dimen/activity_horizontal_margin">
+                    <CheckBox
+                        android:id="@+id/pyramid_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:button="@null"
+                        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+                        android:text="@string/fragment_pyramid_regular_label"
+                        android:checked="false" />
+                </LinearLayout>
+
                 <Button
                     android:id="@+id/button_calculate"
                     android:layout_width="wrap_content"
@@ -131,7 +148,8 @@
             card:cardMaxElevation="8dp"
             card:layout_constraintEnd_toEndOf="parent"
             card:layout_constraintStart_toStartOf="parent"
-            card:layout_constraintTop_toTopOf="parent">
+            card:layout_constraintTop_toTopOf="parent"
+            android:visibility="gone">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -184,6 +202,34 @@
                     </TextView>
                     <TextView
                         android:id="@+id/base"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:gravity="end|center">
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/type_label"
+                        android:text="@string/fragment_pyramid_type_label"
+                        android:layout_width="120dp"
+                        android:layout_height="match_parent"
+                        android:gravity="start|center"
+                        android:textSize="16sp"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin">
+                    </TextView>
+                    <TextView
+                        android:id="@+id/type"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:textSize="16sp"

@@ -21,11 +21,17 @@
     <string name="fragment_pyramid_base_label">Base:</string>
     <string name="fragment_pyramid_sides_label">Sides:</string>
     <string name="fragment_pyramid_calc_label">Calculate</string>
+    <string name="fragment_pyramid_regular_label">Is regular</string>
     <string name="fragment_pyramid_edit_label">Edit</string>
     <string name="fragment_pyramid_calc_zero">Values cannot have zero, cause then the value doesn\'t exists.</string>
     <string name="fragment_pyramid_area_label">Area:</string>
     <string name="fragment_pyramid_apothem_label">Apothem:</string>
     <string name="fragment_pyramid_volume_label">Volume:</string>
+    <string name="fragment_pyramid_type_label">Type:</string>
+    <string name="fragment_pyramid_type_regular">Regular</string>
+    <string name="fragment_pyramid_type_irregular">Irregular</string>
+
+    <string name="error_numeric_values_only">You must provide numeric values only</string>
 
     <string-array name="fragment_pyramid_sides_spinners">
         <item>Triangular</item>

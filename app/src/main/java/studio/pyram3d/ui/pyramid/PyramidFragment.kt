@@ -11,8 +11,6 @@ import androidx.lifecycle.ViewModelProvider
 import studio.pyram3d.R
 import studio.pyram3d.data.Pyramid
 import studio.pyram3d.databinding.FragmentPyramidBinding
-import java.lang.Exception
-import kotlin.math.nextTowards
 
 class PyramidFragment : Fragment() {
 
@@ -52,23 +50,25 @@ class PyramidFragment : Fragment() {
                     binding.pyramidHeight.isEnabled = false
                     binding.pyramidBase.isEnabled = false
                     binding.pyramidSides.isEnabled = false
+                    binding.pyramidRegular.isEnabled = false
 
                     binding.buttonEdit.visibility = View.VISIBLE
 
                     binding.pyramid.visibility = View.VISIBLE
 
-                    val pyramid = Pyramid(height, base, sides)
+                    val pyramid = Pyramid(height, base, sides, binding.pyramidRegular.isChecked)
 
                     binding.height.text = pyramid.height.toString()
                     binding.base.text = pyramid.base.toString()
                     binding.sides.text = pyramid.laterals.size.toString()
                     binding.area.text = pyramid.area.toString()
                     binding.apothem.text = String.format("%.4f", pyramid.laterals.first().apothem)
-                    binding.volume.text = pyramid.volume.toString()
+                    binding.volume.text = String.format("%.4f", pyramid.volume)
+                    binding.type.text = getString(if (binding.pyramidRegular.isChecked) R.string.fragment_pyramid_type_regular else R.string.fragment_pyramid_type_irregular)
                 }
                 else Toast.makeText(view.context, R.string.fragment_pyramid_calc_zero, Toast.LENGTH_SHORT).show()
-            } catch (e: Exception) {
-                Toast.makeText(context, e.message, Toast.LENGTH_SHORT).show()
+            } catch (e: NumberFormatException) {
+                Toast.makeText(context, R.string.error_numeric_values_only, Toast.LENGTH_SHORT).show()
             }
         }
 
@@ -80,6 +80,7 @@ class PyramidFragment : Fragment() {
             binding.pyramidHeight.isEnabled = true
             binding.pyramidBase.isEnabled = true
             binding.pyramidSides.isEnabled = true
+            binding.pyramidRegular.isEnabled = true
         }
 
         return root
