@@ -1,2 +1,2 @@
-rootProject.name = "GeoBooth"
+rootProject.name = "Pyram3d Studio"
 include ':app'
