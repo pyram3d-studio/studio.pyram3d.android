@@ -109,6 +109,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:button="@null"
+                        android:textSize="16sp"
                         android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
                         android:text="@string/fragment_pyramid_regular_label"
                         android:checked="false" />

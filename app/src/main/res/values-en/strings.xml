@@ -18,8 +18,8 @@
     <string name="fragment_home_curiosity_3">Pyramids can be classified according to the number of sides that their base has: triangular, quadrangular, pentagonal and hexagonal.</string>
 
     <string name="fragment_pyramid_height_label">Height:</string>
-    <string name="fragment_pyramid_base_label">Base:</string>
-    <string name="fragment_pyramid_sides_label">Sides:</string>
+    <string name="fragment_pyramid_base_label">Side:</string>
+    <string name="fragment_pyramid_sides_label">Base Type:</string>
     <string name="fragment_pyramid_calc_label">Calculate</string>
     <string name="fragment_pyramid_regular_label">Is regular</string>
     <string name="fragment_pyramid_edit_label">Edit</string>
@@ -30,6 +30,9 @@
     <string name="fragment_pyramid_type_label">Type:</string>
     <string name="fragment_pyramid_type_regular">Regular</string>
     <string name="fragment_pyramid_type_irregular">Irregular</string>
+    <string name="fragment_oyramid_meassure_label">%1$s(um)</string>
+    <string name="fragment_oyramid_meassure2_label">%1$s(um)^2</string>
+    <string name="fragment_oyramid_meassure3_label">%1$s(um)^3</string>
 
     <string name="error_numeric_values_only">You must provide numeric values only</string>
 
