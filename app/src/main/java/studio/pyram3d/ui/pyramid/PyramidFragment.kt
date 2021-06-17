@@ -41,7 +41,7 @@ class PyramidFragment : Fragment() {
         }
 
         binding.buttonCalculate.setOnClickListener { view ->
-            // try {
+            try {
                 val height: Double = binding.pyramidHeight.text.toString().toDouble()
                 val base: Double = binding.pyramidBase.text.toString().toDouble()
                 val sides: Int = binding.pyramidSides.selectedItemPosition + 3
@@ -70,9 +70,13 @@ class PyramidFragment : Fragment() {
                     binding.volume.text = getString(R.string.fragment_oyramid_meassure3_label, String.format("%.4f", pyramid.volume))
                     binding.type.text = getString(if (binding.pyramidRegular.isChecked) R.string.fragment_pyramid_type_regular else R.string.fragment_pyramid_type_irregular)
                 }
-            // } catch (e: ArithmeticException) {
-            //    Toast.makeText(context, R.string.fragment_pyramid_calc_zero, Toast.LENGTH_SHORT).show()
-            // }
+            }
+            catch (e: NumberFormatException) {
+                Snackbar.make(view, R.string.fragment_pyramid_error_format, Snackbar.LENGTH_SHORT).show()
+            }
+            catch (e: Exception) {
+                Snackbar.make(view, R.string.fragment_pyramid_error_data, Snackbar.LENGTH_SHORT).show()
+            }
         }
 
         binding.buttonEdit.setOnClickListener { view ->
