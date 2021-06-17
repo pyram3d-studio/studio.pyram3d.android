@@ -9,11 +9,12 @@ class Pyramid(val height: Double, val side: Double, baseType: Int = 3, regular: 
         4 -> side
         else -> 0.0
     }
-    private val area: Double = when (baseType) {
+    val area: Double = when (baseType) {
         3 -> (side * baseHeight) / 2
         4 -> side * side
         else -> 0.0
     }
+    val apothem: Double;
     private val lateralArea: Double
     val totalArea: Double
     val volume: Double = if (regular)
@@ -28,10 +29,10 @@ class Pyramid(val height: Double, val side: Double, baseType: Int = 3, regular: 
 
     init {
         arrayOfNulls<Triangle>(baseType).iterator().forEach { _ -> this.laterals.add(Triangle(height,baseHeight / 2)) }
-        val apothem: Double = if (this.laterals.any()) this.laterals.first().apothem else 0.0
+        apothem = if (this.laterals.any()) this.laterals.first().apothem else 0.0
         lateralArea = when (baseType) {
             3 -> ((side * 3) * apothem) / 2
-            4 -> ((area * apothem) / 2) * baseType 
+            4 -> ((side * apothem) / 2) * baseType
             else -> 0.0
         }
         totalArea = area + lateralArea

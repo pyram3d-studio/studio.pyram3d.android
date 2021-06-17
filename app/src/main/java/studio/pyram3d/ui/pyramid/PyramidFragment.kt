@@ -5,13 +5,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.snackbar.Snackbar
 import studio.pyram3d.R
 import studio.pyram3d.data.Pyramid
 import studio.pyram3d.databinding.FragmentPyramidBinding
+import kotlin.math.sqrt
 
 class PyramidFragment : Fragment() {
 
@@ -62,13 +62,28 @@ class PyramidFragment : Fragment() {
                     // Calc
                     val pyramid = Pyramid(height, base, sides, binding.pyramidRegular.isChecked)
 
-                    binding.height.text = getString(R.string.fragment_oyramid_meassure_label, pyramid.height.toString())
-                    binding.base.text = getString(R.string.fragment_oyramid_meassure_label, pyramid.side.toString())
+                    binding.height.text = getString(R.string.fragment_pyramid_meassure_label, pyramid.height.toString())
+                    binding.base.text = getString(R.string.fragment_pyramid_meassure_label, pyramid.side.toString())
                     binding.sides.text = pyramid.laterals.size.toString()
-                    binding.area.text = getString(R.string.fragment_oyramid_meassure2_label, String.format("%.4f", pyramid.totalArea))
-                    binding.apothem.text = getString(R.string.fragment_oyramid_meassure_label, String.format("%.4f", pyramid.laterals.first().apothem))
-                    binding.volume.text = getString(R.string.fragment_oyramid_meassure3_label, String.format("%.4f", pyramid.volume))
+                    binding.area.text = getString(R.string.fragment_pyramid_meassure2_label, String.format("%.4f", pyramid.totalArea))
+                    binding.apothem.text = getString(R.string.fragment_pyramid_meassure_label, String.format("%.4f", pyramid.laterals.first().apothem))
+                    binding.volume.text = getString(R.string.fragment_pyramid_meassure3_label, String.format("%.4f", pyramid.volume))
                     binding.type.text = getString(if (binding.pyramidRegular.isChecked) R.string.fragment_pyramid_type_regular else R.string.fragment_pyramid_type_irregular)
+
+                    if (pyramid.laterals.size == 4) {
+                        val triangleHeight = pyramid.height / 2
+                        val triangleApothem = pyramid.apothem / 2;
+                        val triangleSide = sqrt(
+                            (triangleApothem * triangleApothem) - (triangleHeight * triangleHeight)
+                        ) * 2
+                        val triangleArea = triangleSide * triangleSide
+                        binding.volumeHalf.text = getString(R.string.fragment_pyramid_meassure3_label, String.format("%.4f", (
+                                    (pyramid.area + (triangleArea) + sqrt(pyramid.area * triangleArea)) * (triangleHeight / 3)
+                                )
+                            )
+                        )
+                        binding.volumeHalfGroup.visibility = View.VISIBLE
+                    } else binding.volumeHalfGroup.visibility = View.GONE
                 }
             }
             catch (e: NumberFormatException) {

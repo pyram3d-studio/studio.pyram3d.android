@@ -351,6 +351,36 @@
                         android:gravity="end|center">
                     </TextView>
                 </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/volume_half_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+                    <TextView
+                        android:id="@+id/volume_half_label"
+                        android:text="@string/fragment_pyramid_volume_half_label"
+                        android:layout_width="120dp"
+                        android:layout_height="match_parent"
+                        android:gravity="start|center"
+                        android:textSize="16sp"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin">
+                    </TextView>
+                    <TextView
+                        android:id="@+id/volume_half"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:gravity="end|center">
+                    </TextView>
+                </LinearLayout>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
     </LinearLayout>

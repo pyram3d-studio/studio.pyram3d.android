@@ -27,13 +27,14 @@
     <string name="fragment_pyramid_area_label">Área:</string>
     <string name="fragment_pyramid_apothem_label">Apotema:</string>
     <string name="fragment_pyramid_volume_label">Volúmen:</string>
+    <string name="fragment_pyramid_volume_half_label">Volúmen del tronco:</string>
     <string name="fragment_pyramid_type_label">Tipo:</string>
     <string name="fragment_pyramid_type_regular">Regular</string>
     <string name="fragment_pyramid_type_irregular">Irregular</string>
     <string name="error_numeric_values_only">Debes proveer sólo valores numericos</string>
-    <string name="fragment_oyramid_meassure_label">%1$sm</string>
-    <string name="fragment_oyramid_meassure2_label">%1$sm<sup>2</sup></string>
-    <string name="fragment_oyramid_meassure3_label">%1$sm<sup>3</sup></string>
+    <string name="fragment_pyramid_meassure_label">%1$sm</string>
+    <string name="fragment_pyramid_meassure2_label">%1$sm<sup>2</sup></string>
+    <string name="fragment_pyramid_meassure3_label">%1$sm<sup>3</sup></string>
     <string name="fragment_pyramid_error_format">Se deben ingresar valores numéricos.</string>
     <string name="fragment_pyramid_error_data">Ha ocurrido un error al intentar procesar el cálculo.</string>
     <string-array name="fragment_pyramid_sides_spinners">
