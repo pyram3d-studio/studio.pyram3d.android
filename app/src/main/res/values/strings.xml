@@ -23,7 +23,7 @@
     <string name="fragment_pyramid_calc_label">Calcular</string>
     <string name="fragment_pyramid_regular_label">Es regular</string>
     <string name="fragment_pyramid_edit_label">Editar</string>
-    <string name="fragment_pyramid_calc_zero">Los valores no pueden contener cero, porque entonces el valor no existe.</string>
+    <string name="fragment_pyramid_calc_zero">La medida no puede ser cero, porque no es un valor graficable ni medible y por lo tanto la pirámide deja de existir.</string>
     <string name="fragment_pyramid_area_label">Área:</string>
     <string name="fragment_pyramid_apothem_label">Apotema:</string>
     <string name="fragment_pyramid_volume_label">Volúmen:</string>

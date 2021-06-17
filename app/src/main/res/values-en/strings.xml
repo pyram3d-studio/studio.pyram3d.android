@@ -23,7 +23,7 @@
     <string name="fragment_pyramid_calc_label">Calculate</string>
     <string name="fragment_pyramid_regular_label">Is regular</string>
     <string name="fragment_pyramid_edit_label">Edit</string>
-    <string name="fragment_pyramid_calc_zero">Values cannot have zero, cause then the value doesn\'t exists.</string>
+    <string name="fragment_pyramid_calc_zero">Lenght cannot be zero, because it\'s not a graphicable value y therefore pyramide doesn\'t exists.</string>
     <string name="fragment_pyramid_area_label">Area:</string>
     <string name="fragment_pyramid_apothem_label">Apothem:</string>
     <string name="fragment_pyramid_volume_label">Volume:</string>

@@ -31,7 +31,7 @@ class Pyramid(val height: Double, val side: Double, baseType: Int = 3, regular: 
         val apothem: Double = if (this.laterals.any()) this.laterals.first().apothem else 0.0
         lateralArea = when (baseType) {
             3 -> ((side * 3) * apothem) / 2
-            4 -> ((area * apothem) / 2) * baseType
+            4 -> ((area * apothem) / 2) * baseType 
             else -> 0.0
         }
         totalArea = area + lateralArea

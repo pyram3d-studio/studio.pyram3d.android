@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.google.android.material.snackbar.Snackbar
 import studio.pyram3d.R
 import studio.pyram3d.data.Pyramid
 import studio.pyram3d.databinding.FragmentPyramidBinding
@@ -40,12 +41,14 @@ class PyramidFragment : Fragment() {
         }
 
         binding.buttonCalculate.setOnClickListener { view ->
-            try {
+            // try {
                 val height: Double = binding.pyramidHeight.text.toString().toDouble()
                 val base: Double = binding.pyramidBase.text.toString().toDouble()
                 val sides: Int = binding.pyramidSides.selectedItemPosition + 3
 
-                if (height > 0 || base > 0) {
+                if (height == 0.0 || base == 0.0)
+                    Snackbar.make(view, R.string.fragment_pyramid_calc_zero, Snackbar.LENGTH_SHORT).show()
+                else {
                     view.visibility = View.GONE
                     binding.pyramidHeight.isEnabled = false
                     binding.pyramidBase.isEnabled = false
@@ -67,10 +70,9 @@ class PyramidFragment : Fragment() {
                     binding.volume.text = getString(R.string.fragment_oyramid_meassure3_label, String.format("%.4f", pyramid.volume))
                     binding.type.text = getString(if (binding.pyramidRegular.isChecked) R.string.fragment_pyramid_type_regular else R.string.fragment_pyramid_type_irregular)
                 }
-                else Toast.makeText(view.context, R.string.fragment_pyramid_calc_zero, Toast.LENGTH_SHORT).show()
-            } catch (e: NumberFormatException) {
-                Toast.makeText(context, R.string.error_numeric_values_only, Toast.LENGTH_SHORT).show()
-            }
+            // } catch (e: ArithmeticException) {
+            //    Toast.makeText(context, R.string.fragment_pyramid_calc_zero, Toast.LENGTH_SHORT).show()
+            // }
         }
 
         binding.buttonEdit.setOnClickListener { view ->
