@@ -1,8 +1,6 @@
 package studio.pyram3d.ui.pyramid
 
 import android.os.Bundle
-import android.text.Html
-import android.text.Html.FROM_HTML_MODE_LEGACY
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -58,14 +56,15 @@ class PyramidFragment : Fragment() {
 
                     binding.pyramid.visibility = View.VISIBLE
 
+                    // Calc
                     val pyramid = Pyramid(height, base, sides, binding.pyramidRegular.isChecked)
 
                     binding.height.text = getString(R.string.fragment_oyramid_meassure_label, pyramid.height.toString())
                     binding.base.text = getString(R.string.fragment_oyramid_meassure_label, pyramid.side.toString())
                     binding.sides.text = pyramid.laterals.size.toString()
-                    binding.area.text = Html.fromHtml(getString(R.string.fragment_oyramid_meassure2_label, String.format("%.4f", pyramid.totalArea)))
+                    binding.area.text = getString(R.string.fragment_oyramid_meassure2_label, String.format("%.4f", pyramid.totalArea))
                     binding.apothem.text = getString(R.string.fragment_oyramid_meassure_label, String.format("%.4f", pyramid.laterals.first().apothem))
-                    binding.volume.text = Html.fromHtml(getString(R.string.fragment_oyramid_meassure3_label, String.format("%.4f", pyramid.volume)))
+                    binding.volume.text = getString(R.string.fragment_oyramid_meassure3_label, String.format("%.4f", pyramid.volume))
                     binding.type.text = getString(if (binding.pyramidRegular.isChecked) R.string.fragment_pyramid_type_regular else R.string.fragment_pyramid_type_irregular)
                 }
                 else Toast.makeText(view.context, R.string.fragment_pyramid_calc_zero, Toast.LENGTH_SHORT).show()

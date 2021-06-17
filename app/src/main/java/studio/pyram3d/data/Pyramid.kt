@@ -2,19 +2,19 @@ package studio.pyram3d.data
 
 import kotlin.math.sqrt
 
-class Pyramid(val height: Double, val side: Double, baseType: Int = 3, val regular: Boolean = false) {
+class Pyramid(val height: Double, val side: Double, baseType: Int = 3, regular: Boolean = false) {
     val laterals: HashSet<Triangle> = hashSetOf()
-    val baseHeight: Double = when (baseType) {
+    private val baseHeight: Double = when (baseType) {
         3 -> sqrt((side * side) - ((side / 2) * (side / 2)))
         4 -> side
         else -> 0.0
     }
-    val area: Double = when (baseType) {
+    private val area: Double = when (baseType) {
         3 -> (side * baseHeight) / 2
         4 -> side * side
         else -> 0.0
     }
-    val lateralArea: Double
+    private val lateralArea: Double
     val totalArea: Double
     val volume: Double = if (regular)
         when (baseType) {
