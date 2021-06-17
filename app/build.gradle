@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId 'studio.pyram3d'
-        minSdkVersion 25
+        minSdkVersion 23
         targetSdkVersion 30
         versionCode 1
         versionName "1.3"

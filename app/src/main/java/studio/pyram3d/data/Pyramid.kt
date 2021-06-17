@@ -14,7 +14,7 @@ class Pyramid(val height: Double, val side: Double, baseType: Int = 3, regular: 
         4 -> side * side
         else -> 0.0
     }
-    val apothem: Double;
+    val apothem: Double
     private val lateralArea: Double
     val totalArea: Double
     val volume: Double = if (regular)
